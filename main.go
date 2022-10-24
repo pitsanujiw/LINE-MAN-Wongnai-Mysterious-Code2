@@ -12,6 +12,7 @@ func Decode(cipherText string, numRails int) string {
 	for index, to := range data {
 		plainText[to] = string(cipherText[index])
 	}
+
 	return strings.Join(plainText, "")
 }
 
