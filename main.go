@@ -16,8 +16,9 @@ func Decode(cipherText string, numRails int) string {
 }
 
 func MakeCipher(items int, numRails int) []int {
-	var rails [][]int
+	rails := [][]int{}
 	rail, dRail := 0, 1
+
 	for i := 0; i < items; i++ {
 		if rail <= numRails {
 			rails = append(rails, []int{})
@@ -39,7 +40,7 @@ func MakeCipher(items int, numRails int) []int {
 }
 
 func CutFrequently(txt string) string {
-	var remember [256]int
+	remember := [256]int{}
 	for i := 0; i < 256; i++ {
 		remember[i] = 0
 	}
